@@ -71,7 +71,7 @@ const MapMatrix = () => {
     e.preventDefault();
     setLoading(true);
     try {
-        const url = `http://localhost:3000/api/distance-matrix?olat=${originLat.lat}&olon=${originLat.lon}&dlat=${destLat.lat}&dlon=${destLat.lon}`;
+        const url = `https://pec-alpha.vercel.app/api/distance-matrix?olat=${originLat.lat}&olon=${originLat.lon}&dlat=${destLat.lat}&dlon=${destLat.lon}`;
         const response = await fetch(url, {
           method: 'GET',
           headers: {

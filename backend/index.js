@@ -4,11 +4,13 @@ const axios = require('axios');
 require('dotenv').config();
 const app = express();
 
-app.use(cors({
-  origin: 'http://localhost:3001',
-  credentials: true,
-}));
-
+const corsOptions = {
+  origin: ['https://logistics-pec.vercel.app'],
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true, // enable set cookie
+  optionsSuccessStatus: 204,
+};
+app.use(cors(corsOptions));
 
 app.use(express.json());
 

@@ -92,17 +92,17 @@ const MapMatrix = () => {
 
   return (
     <div className='font-mono h-full bg-gradient-to-r from-blue-300 via-white to-blue-300 pb-6'>
-        <div className='pt-28 text-black flex justify-center text-4xl font-bold'>
+        <div className=' pt-24 text-2xl md:pt-28 text-black flex justify-center md:text-4xl font-bold'>
             Find the Shortest Route
         </div>
-        <div className='flex justify-center pt-24'>
+        <div className='block px-10 items-center pt-4 md:flex md:justify-center md:pt-24'>
             <div>
                 <input
                 type="text"
                 placeholder="Enter an origin location"
                 value={origin}
                 onChange={(e) => handleOriginPlaceSelect(e.target.value)}
-                className='text-lg border-2 border-black w-80 rounded-md p-2 mx-2'
+                className='text-lg mt-5 border-2 border-black w-80 rounded-md p-2 mx-2'
                 />
                 {originLoading && <div>Loading...</div>}
                 {error && <div>Error: {error}</div>}
@@ -122,7 +122,7 @@ const MapMatrix = () => {
                 placeholder="Enter a destination location"
                 value={destination}
                 onChange={(e) => handleDestinationPlaceSelect(e.target.value)}
-                className='text-lg border-2 border-black w-80 rounded-md p-2 mx-2'
+                className='text-lg mt-5 border-2 border-black w-80 rounded-md p-2 mx-2'
                 />
                 {destLoading && <div>Loading...</div>}
                 {error && <div>Error: {error}</div>}
@@ -144,21 +144,21 @@ const MapMatrix = () => {
       {loading && <div className=' flex justify-center'>Loading...</div>}
       {error && <div>Error: {error}</div>}
       {data && (
-        <div className=' mx-[25%]'>
+        <div className=' mx-[10%] md:mx-[25%]'>
           <div>
-            <h3 className=' font-semibold text-xl'>Origin:</h3>
+            <h3 className=' text-center md:text-left font-semibold text-xl'>Origin:</h3>
             <p >{data.origin_addresses[0]}</p>
           </div>
           <div>
-            <h3 className=' font-semibold text-xl'>Destination:</h3>
+            <h3 className=' text-center md:text-left font-semibold text-xl'>Destination:</h3>
             <p>{data.destination_addresses[0]}</p>
           </div>
           <div>
-            <h3 className=' font-semibold text-xl'>Distance:</h3>
+            <h3 className=' text-center md:text-left font-semibold text-xl'>Distance:</h3>
             <p>{data.rows[0].elements[0].distance.text}</p>
           </div>
           <div>
-            <h3 className=' font-semibold text-xl'>Duration:</h3>
+            <h3 className=' text-center md:text-left font-semibold text-xl'>Duration:</h3>
             <p>{data.rows[0].elements[0].duration.text}</p>
           </div>
         </div>

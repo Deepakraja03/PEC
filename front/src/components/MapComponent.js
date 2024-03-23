@@ -105,14 +105,14 @@ const MapComponent = () => {
   }, []); // Empty dependency array to ensure useEffect runs only once
 
   return (
-    <div>
-      <div id="map" style={{ width: '100%', height: '600px' }}></div>
+    <div className='pt-16 mx-2 '>
+      <div id="map" className='rounded-xl' style={{ width: '100%', height: '600px' }}></div>
       <div hidden>
         <h3>Request:</h3>
         <pre id="request"></pre>
       </div>
       <div>
-<div class="container my-24 mx-auto md:px-6">
+<div class="container my-32 mx-auto md:px-6">
   <section class="mb-32">
     <div class="container px-6 md:px-12">
       <div

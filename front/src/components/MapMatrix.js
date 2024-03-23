@@ -95,14 +95,14 @@ const MapMatrix = () => {
         <div className=' pt-24 text-2xl md:pt-28 text-black flex justify-center md:text-4xl font-bold'>
             Find the Shortest Route
         </div>
-        <div className='block px-10 items-center pt-4 md:flex md:justify-center md:pt-24'>
+        <div className='block items-center mx-24 md:mx-0 pt-4 md:flex md:justify-center md:pt-24'>
             <div>
                 <input
                 type="text"
                 placeholder="Enter an origin location"
                 value={origin}
                 onChange={(e) => handleOriginPlaceSelect(e.target.value)}
-                className='text-lg mt-5 border-2 border-black w-80 rounded-md p-2 mx-2'
+                className='text-lg mt-5 border-2 border-black md:w-80 rounded-md p-2 mx-2'
                 />
                 {originLoading && <div>Loading...</div>}
                 {error && <div>Error: {error}</div>}
@@ -122,7 +122,7 @@ const MapMatrix = () => {
                 placeholder="Enter a destination location"
                 value={destination}
                 onChange={(e) => handleDestinationPlaceSelect(e.target.value)}
-                className='text-lg mt-5 border-2 border-black w-80 rounded-md p-2 mx-2'
+                className='text-lg mt-5 border-2 border-black md:w-80 rounded-md p-2 mx-2'
                 />
                 {destLoading && <div>Loading...</div>}
                 {error && <div>Error: {error}</div>}

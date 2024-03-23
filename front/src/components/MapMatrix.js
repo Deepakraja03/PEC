@@ -95,7 +95,7 @@ const MapMatrix = () => {
         <div className=' pt-24 text-2xl md:pt-28 text-black flex justify-center md:text-4xl font-bold'>
             Find the Shortest Route
         </div>
-        <div className='block items-center mx-10 pl-4c md:mx-0 pt-4 md:flex md:justify-center md:pt-24'>
+        <div className='block items-center mx-10 pl-6 md:mx-0 pt-4 md:flex md:justify-center md:pt-24'>
             <div>
                 <input
                 type="text"
